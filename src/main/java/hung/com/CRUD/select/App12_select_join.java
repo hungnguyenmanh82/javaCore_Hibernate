@@ -16,7 +16,8 @@ public class App12_select_join {
 
 	public static void main(String[] args) {
 		SessionFactory factory = MySessionFactory.getSessionFactory();
-
+		
+		// Hibernate auto close this session based on thread context (don't care about it)
 		Session session = factory.getCurrentSession();
 
 		try {
