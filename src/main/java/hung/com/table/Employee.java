@@ -88,6 +88,8 @@ public class Employee {
 		this.job = job;
 	}
 
+	// @oneToMany sẽ tạo Foreign key
+	// tên Key sẽ đc generate tự động bởi Hibernate
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "MNG_ID")
 	public Employee getManager() {
@@ -127,8 +129,10 @@ public class Employee {
 		this.image = image;
 	}
 
+	// @oneToMany sẽ tạo Foreign key
+	// tên Key sẽ đc generate tự động bởi Hibernate
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "DEPT_ID", nullable = false)
+	@JoinColumn(name = "DEPT_ID", nullable = false)   //join tới table khác (ko cùng table)
 	public Department getDepartment() {
 		return department;
 	}
@@ -137,6 +141,8 @@ public class Employee {
 		this.department = department;
 	}
 
+	// @oneToMany sẽ tạo Foreign key
+	// tên Key sẽ đc generate tự động bởi Hibernate
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empId")
 	public Set<Employee> getEmployees() {
 		return employees;

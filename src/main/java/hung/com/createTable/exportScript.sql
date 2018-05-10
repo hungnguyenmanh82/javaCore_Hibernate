@@ -1,0 +1,18 @@
+alter table EMPLOYEE drop foreign key FK65bgags9wjppbn5x7vjcqhext;
+alter table EMPLOYEE drop foreign key FKkcawqtfitoe3w528metq1o03c;
+alter table EMPLOYEE drop foreign key FK2a6tjfuq36r7idhfm7y9gscqu;
+alter table TIMEKEEPER drop foreign key FKifwkxix749p4scwkaeybcj4uc;
+drop table if exists DEPARTMENT;
+drop table if exists EMPLOYEE;
+drop table if exists SALARY_GRADE;
+drop table if exists TIMEKEEPER;
+create table DEPARTMENT (DEPT_ID integer not null, DEPT_NAME varchar(255) not null, DEPT_NO varchar(20) not null, LOCATION varchar(255), primary key (DEPT_ID));
+create table EMPLOYEE (EMP_ID bigint not null, EMP_NAME varchar(50) not null, EMP_NO varchar(20) not null, HIRE_DATE date not null, IMAGE longblob, JOB varchar(30) not null, SALARY float not null, DEPT_ID integer not null, MNG_ID bigint, primary key (EMP_ID));
+create table SALARY_GRADE (GRADE integer not null, HIGH_SALARY float not null, LOW_SALARY float not null, primary key (GRADE));
+create table TIMEKEEPER (Timekeeper_Id varchar(36) not null, Date_Time datetime not null, In_Out char(1) not null, EMP_ID bigint not null, primary key (Timekeeper_Id));
+alter table DEPARTMENT add constraint UK504cmb4vdtk4qhlyo0gunu2ew unique (DEPT_NO);
+alter table EMPLOYEE add constraint UK7fqco7dry69w4ba8sh8qn21b unique (EMP_NO);
+alter table EMPLOYEE add constraint FK65bgags9wjppbn5x7vjcqhext foreign key (DEPT_ID) references DEPARTMENT (DEPT_ID);
+alter table EMPLOYEE add constraint FKkcawqtfitoe3w528metq1o03c foreign key (MNG_ID) references EMPLOYEE (EMP_ID);
+alter table EMPLOYEE add constraint FK2a6tjfuq36r7idhfm7y9gscqu foreign key (EMP_ID) references EMPLOYEE (EMP_ID);
+alter table TIMEKEEPER add constraint FKifwkxix749p4scwkaeybcj4uc foreign key (EMP_ID) references EMPLOYEE (EMP_ID);
