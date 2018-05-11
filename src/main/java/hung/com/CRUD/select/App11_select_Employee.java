@@ -23,7 +23,7 @@ public class App11_select_Employee {
 
 		try {
 			// Tất cả các lệnh hành động với DB thông qua Hibernate
-			// đ�?u phải nằm trong 1 giao dịch (Transaction)
+			// đều phải nằm trong 1 giao dịch (Transaction)
 			// Bắt đầu giao dịch
 			session.getTransaction().begin();
 

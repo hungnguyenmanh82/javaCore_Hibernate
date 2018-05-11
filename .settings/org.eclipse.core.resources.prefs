@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+encoding//src/main/java/hung/com/CRUD/delete/App3_delete.java=UTF-8
 encoding//src/main/java/hung/com/CRUD/insert/App21_persistent_insert.java=UTF-8
 encoding//src/main/java/hung/com/CRUD/insert/App22_persitent_Hibernate_genId.java=UTF-8
 encoding//src/main/java/hung/com/CRUD/insert/App23_save.java=UTF-8
@@ -11,6 +12,8 @@ encoding//src/main/java/hung/com/CRUD/select/App13_select_showSome.java=UTF-8
 encoding//src/main/java/hung/com/CRUD/select/App14_select_shortEmpInfo.java=UTF-8
 encoding//src/main/java/hung/com/CRUD/select/App15_select_where.java=UTF-8
 encoding//src/main/java/hung/com/CRUD/update/App31_flush_update.java=UTF-8
+encoding//src/main/java/hung/com/nativeSql/App61_nativeSql.java=UTF-8
+encoding//src/main/java/hung/com/nativeSql/App61_nativeSql2.java=UTF-8
 encoding//src/main/java/hung/com/sessionFactory/MySessionFactory.java=UTF-8
 encoding//src/main/java/hung/com/table/ShortEmpInfo.java=UTF-8
 encoding//src/main/resources=UTF-8
