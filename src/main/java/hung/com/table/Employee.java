@@ -33,8 +33,8 @@ public class Employee {
 	private Float salary;
 	private byte[] image;
 
-	private Department department;
-	private Set<Employee> employees = new HashSet<Employee>(0);
+	private Department department;  //chỗ này là DEPT_ID của DEPARTMENT table 
+//	private Set<Employee> employees = new HashSet<Employee>(0);
 
 	public Employee() {
 	}
@@ -88,7 +88,7 @@ public class Employee {
 		this.job = job;
 	}
 
-	// @oneToMany sẽ tạo Foreign key
+	// @ManyToOne  sẽ tạo Foreign key
 	// tên Key sẽ đc generate tự động bởi Hibernate
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "MNG_ID")
@@ -129,19 +129,20 @@ public class Employee {
 		this.image = image;
 	}
 
-	// @oneToMany sẽ tạo Foreign key
+	// @ManyToOne tại table này là Many (foreign key), tại  DEPARTMENT table nó là One (primary key)
 	// tên Key sẽ đc generate tự động bởi Hibernate
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "DEPT_ID", nullable = false)   //join tới table khác (ko cùng table)
-	public Department getDepartment() {
+	@JoinColumn(name = "DEPT_ID", nullable = false)   // DEPT_ID là join giữa 2 table
+	public Department getDepartment() { //Department class là đại diện cho table DEPARTMENT table
 		return department;
 	}
 
+	//Department class là đại diện cho table DEPARTMENT table
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
-	// @oneToMany sẽ tạo Foreign key
+/*	// @oneToMany tại table này là One, tại table TimeKeeper là Many
 	// tên Key sẽ đc generate tự động bởi Hibernate
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empId")
 	public Set<Employee> getEmployees() {
@@ -150,6 +151,6 @@ public class Employee {
 
 	public void setEmployees(Set<Employee> employees) {
 		this.employees = employees;
-	}
+	}*/
 
 }
