@@ -29,7 +29,8 @@ public class App61_nativeSql2 {
 			session.getTransaction().begin();
 
 	         String sql = "SELECT * FROM EMPLOYEE";
-	         SQLQuery query = session.createSQLQuery(sql);
+	         
+			 SQLQuery query = session.createSQLQuery(sql);
 	         query.addEntity(Employee.class);
 	         List<Employee> employees = query.list();
 
