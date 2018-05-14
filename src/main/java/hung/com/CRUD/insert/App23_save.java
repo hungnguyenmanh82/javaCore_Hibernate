@@ -55,12 +55,12 @@ public class App23_save {
 		
 		//==============================================================
 		// save() rất giống với persist()
-		// save() trả về ID còn persist() là void.
+		// save() trả về ID còn persist() là void 
 		// Hibernate gán Id vào 'tk2', sẽ chưa có insert gì cả
 		// Nó trả về ID của 'tk2'.
 		Serializable id = session.save(tk2);
 
-		System.out.println("- id = " + id);
+		System.out.println("- id = " + id); //id = b7dca520-586c-4593-a35b-193c9bdf6715
 
 		// 'tk2' đã được gắn ID
 		System.out

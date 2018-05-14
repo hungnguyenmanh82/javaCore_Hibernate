@@ -1,4 +1,4 @@
-package hung.com.CRUD.select;
+package hung.com.CRUD.select.HQL;
 
 import java.util.List;
 
