@@ -17,8 +17,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 
-
-
 @Entity
 @Table(name = "EMPLOYEE",
 uniqueConstraints = { @UniqueConstraint(columnNames = { "EMP_NO" }) })
@@ -131,7 +129,7 @@ public class Employee {
 	// @ManyToOne tại table này là Many (foreign key), tại  DEPARTMENT table nó là One (primary key)
 	// tên Key sẽ đc generate tự động bởi Hibernate
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "DEPT_ID", nullable = false)   // DEPT_ID là join giữa 2 table
+	@JoinColumn(name = "DEPT_ID", nullable = false)   // DEPT_ID là tên trên table Employee (trên Department nó luôn là primary key)
 	public Department getDepartment() { //Department class là đại diện cho table DEPARTMENT table
 		return department;
 	}

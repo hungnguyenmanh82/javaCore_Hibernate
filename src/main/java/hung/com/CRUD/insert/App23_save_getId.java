@@ -12,7 +12,7 @@ import hung.com.sessionFactory.MySessionFactory;
 import hung.com.table.Employee;
 import hung.com.table.Timekeeper;
 
-public class App23_save {
+public class App23_save_getId {
 
 
 	public static void main(String[] args) {
@@ -63,8 +63,7 @@ public class App23_save {
 		System.out.println("- id = " + id); //id = b7dca520-586c-4593-a35b-193c9bdf6715
 
 		// 'tk2' đã được gắn ID
-		System.out
-		.println("- tk2.getTimekeeperId() = " + tk2.getTimekeeperId());
+		System.out.println("- tk2.getTimekeeperId() = " + tk2.getTimekeeperId());
 
 		// Lúc này 'tk2' đã có trạng thái Persistent
 		// Nó đã được quản lý trong Session.

@@ -70,7 +70,9 @@ public class Department {
 		this.location = location;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
+	// chỗ này tạo SQL query SELECT riêng khi gọi hàm này => 
+	// nên nó sẽ dùng dữ kiện @JoinColumn ở class Employee để xác định column tương ứng với ID của Department.
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "department") //department là tên table
 	public Set<Employee> getEmployees() {
 		return employees;
 	}

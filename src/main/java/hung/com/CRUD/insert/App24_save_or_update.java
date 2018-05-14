@@ -22,7 +22,6 @@ public class App24_save_or_update {
 			session.getTransaction().begin();
 
 			emp = DataUtils.findEmployee(session, "E7499");
-
 			saveOrUpdate_Transient(session, emp);
 
 			session.getTransaction().commit();
