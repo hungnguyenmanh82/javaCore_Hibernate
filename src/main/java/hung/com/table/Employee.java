@@ -49,7 +49,7 @@ public class Employee {
 		this.department = department;
 	}
 
-	@Id
+	@Id          //id này ko đc tự động gen ở SQL server
 	@Column(name = "EMP_ID")
 	public Long getEmpId() {
 		return empId;

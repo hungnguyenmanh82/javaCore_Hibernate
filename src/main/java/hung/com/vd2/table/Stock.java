@@ -40,7 +40,7 @@ public class Stock implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)       //sẽ tạo id trên server (để Hibernate bỏ qua nó)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)       //auto gen id trên server khi INSERT (để Hibernate bỏ qua nó)
 	@Column(name = "STOCK_ID", unique = true, nullable = false)
 	public Integer getStockId() {
 		return this.stockId;

@@ -33,7 +33,7 @@ public class Department {
 		this.location = location;
 	}
 
-	@Id
+	@Id 		//id này ko đc tự động gen ở SQL server
 	@Column(name = "DEPT_ID")
 	public Integer getDeptId() {
 		return deptId;

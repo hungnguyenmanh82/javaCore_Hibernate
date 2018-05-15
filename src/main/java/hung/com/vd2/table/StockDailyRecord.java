@@ -47,7 +47,7 @@ public class StockDailyRecord implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //auto gen id trên server khi INSERT (để Hibernate bỏ qua nó)
 	@Column(name = "RECORD_ID", unique = true, nullable = false)
 	public Integer getRecordId() {
 		return this.recordId;
