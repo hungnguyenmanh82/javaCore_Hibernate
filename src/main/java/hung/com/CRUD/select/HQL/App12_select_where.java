@@ -34,6 +34,7 @@ public class App12_select_where {
 
 			//e: là object của Employee Class (Hibernate sẽ map nó với Table Employee)
 			//e.empName: là tên member of Employee Class
+			// Employee java class ko nhất thiết phải chứa hết các column của Employee SQL table
 			String sql = "Select e from " + Employee.class.getName() + " e "
 					                          + " where e.department.deptNo= :deptNo ";
 

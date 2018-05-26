@@ -33,6 +33,7 @@ public class App11_select_sort {
 			
 			//e: là object của Employee Class (Hibernate sẽ map nó với Table Employee)
 			//e.empName: là tên member of Employee Class
+			// Employee java class ko nhất thiết phải chứa hết các column của Employee SQL table
 			String sql = "Select e from " + Employee.class.getName() + " e " + " order by e.empName, e.empNo ";
 
 			// Tạo đối tượng Query.

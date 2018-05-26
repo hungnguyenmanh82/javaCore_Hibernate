@@ -11,8 +11,9 @@ import hung.com.table.Employee;
 /**
 https://o7planning.org/vi/10201/huong-dan-lap-trinh-java-hibernate-cho-nguoi-moi-bat-dau
 
+Ko nên dùng cách này, mỗi khi có truy vấn nên tạo ra 1 java class tương ứng, như vậy code sẽ clear hơn
 */
-public class App13_select_showSome {
+public class App13_select_showSomeFields {
 
 	public static void main(String[] args) {
 		SessionFactory factory = MySessionFactory.getSessionFactory();
@@ -26,7 +27,7 @@ public class App13_select_showSome {
 			// Query một vài cột.
 			// Việc lấy dữ liệu trong trư�?ng hợp này sẽ phức tạp hơn.
 			//e: là object của Employee Class (Hibernate sẽ map nó với Table Employee)
-			//e.empName: là tên member of Employee Class
+			//e.empName: là tên member of Employee java class
 			String sql = "Select e.empId, e.empNo, e.empName from "
 					+ Employee.class.getName() + " e ";
 
