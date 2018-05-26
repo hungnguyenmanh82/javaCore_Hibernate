@@ -24,7 +24,7 @@ public class App14_select_shortEmpInfo {
 		try {
 			session.getTransaction().begin();
 
-			// Sử dụng cấu tử của Class ShortEmpInfo
+			// tên các member trong ShortEmpInfo phải giống tên ở Employee Class
 			//e: là object của Employee Class (Hibernate sẽ map nó với Table Employee)
 			//e.empName: là tên member of Employee Class
 			String sql = "Select new " + ShortEmpInfo.class.getName()
