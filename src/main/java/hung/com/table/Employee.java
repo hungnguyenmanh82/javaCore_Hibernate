@@ -26,7 +26,7 @@ public class Employee {
 
 	private String empName;
 	private String job;
-	private Employee manager;
+	private Employee manager;   //ko dung id của manager
 	private Date hideDate;
 	private Float salary;
 	private byte[] image;
@@ -87,8 +87,9 @@ public class Employee {
 	}
 
 	// @ManyToOne  sẽ tạo Foreign key
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "MNG_ID")
+	//@ManyToOne(fetch = FetchType.EAGER)    // SQL command sẽ lấy luôn Manager khi lấy instance của Employee 
+	@ManyToOne(fetch = FetchType.LAZY)      //chỉ tạo SQL command lấy thông tin manager khi gọi hàm getManager()
+	@JoinColumn(name = "MNG_ID")           //MNG_ID ở Employee sẽ trỏ tới id của Employee
 	public Employee getManager() {   //Employee là table joi
 		return manager;
 	}
@@ -128,7 +129,7 @@ public class Employee {
 
 	// @ManyToOne tại table này là Many (foreign key), tại  DEPARTMENT table nó là One (primary key)
 	// tên Key sẽ đc generate tự động bởi Hibernate
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)                 //chỉ tạo SQL command lấy thông khi gọi hàm getDepartment()
 	@JoinColumn(name = "DEPT_ID", nullable = false)   // DEPT_ID là tên trên table Employee (trên Department nó luôn là primary key)
 	public Department getDepartment() { //Department class là đại diện cho table DEPARTMENT table
 		return department;

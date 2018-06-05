@@ -33,11 +33,12 @@
 		<property name="hibernate.c3p0.max_statements">50</property>
 		<property name="hibernate.c3p0.idle_test_period">3000</property>
 
-		<mapping class="hung.com.table.Department" />
+		<mapping package="hung.com.table"/>
+<!-- 		<mapping class="hung.com.table.Department" />
 		<mapping class="hung.com.table.Employee" />
 		<mapping class="hung.com.table.Employee2" />
 		<mapping class="hung.com.table.SalaryGrade" />
-		<mapping class="hung.com.table.Timekeeper" />
+		<mapping class="hung.com.table.Timekeeper" /> -->
 
 
 	</session-factory>
