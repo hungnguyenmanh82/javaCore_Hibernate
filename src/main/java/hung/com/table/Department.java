@@ -21,6 +21,10 @@ public class Department {
 
 	private String deptName;
 	private String location;
+	/**
+	 * Set là kiểu tập hợp mà item là duy nhất (Hibernate dùng kiểu Set)
+	 * List là kiểu tập hợp mà item có thể lập lại (JPA dùng kiểu List)
+	 */
 	private Set<Employee> employees = new HashSet<Employee>(0);
 
 	public Department() {
