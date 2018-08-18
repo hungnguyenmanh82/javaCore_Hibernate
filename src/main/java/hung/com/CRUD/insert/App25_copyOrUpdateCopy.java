@@ -52,8 +52,7 @@ public class App25_copyOrUpdateCopy {
 
 		// 'tk4Copy' có trạng thái Persistent.
 		// ==> true
-		System.out
-		.println("- tk4Copy Persistent? " + session.contains(tk4Copy));
+		System.out.println("- tk4Copy Persistent? " + session.contains(tk4Copy));
 
 		System.out.println("- Call flush..");
 		// Chủ động đẩy dữ liệu xuống DB, gọi flush().

@@ -41,6 +41,7 @@ public class App12_select_where {
 			// Tạo đối tượng Query.
 			Query<Employee> query = session.createQuery(sql);
 
+			// Các tham số dua vao co the chua special character vì thế dùng cách này an toàn
 			query.setParameter("deptNo", "D10");  // ":deptNo" tương tự "?" trên SQL
 
 			// Thực hiện truy vấn.
