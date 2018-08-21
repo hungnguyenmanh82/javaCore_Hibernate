@@ -19,6 +19,10 @@ public class App21_persistent_insert {
 
 		SessionFactory factory = MySessionFactory.getSessionFactory();
 
+		/**
+		 * Ko phải close session, 
+		 * Hibernate sẽ thu hồi lại connect này cho connect pool khi Thread stop
+		 */
 		Session session = factory.getCurrentSession();
 		Department department = null;
 		Employee emp = null;
