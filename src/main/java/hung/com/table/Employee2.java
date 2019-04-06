@@ -18,7 +18,10 @@ import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 
 
-
+/**
+ * Chỉ lấy 1 phần dữ liệu trong Table thôi. Ko lấy tất cả
+ * Mục tieu của ORM là để mapping
+ */
 @Entity
 @Table(name = "EMPLOYEE",
 uniqueConstraints = { @UniqueConstraint(columnNames = { "EMP_NO" }) })
