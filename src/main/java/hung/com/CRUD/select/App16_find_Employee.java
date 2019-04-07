@@ -25,6 +25,7 @@ public class App16_find_Employee {
 			session.getTransaction().begin();
 
 			//tại đây tạo câu lệnh SELECT vào table Employee thôi (ko có lệnh JOIN)
+			// truong hop Primary key la combine key => thi combine key la 1 class gom 2 key => new CombineKey object o vi tri Long().
 			Employee emp = session.find(Employee.class, new Long(7499)); //id = 7499
 			System.out.println("===============================start");
 			System.out.println("name = " + emp.getEmpName() + ", no = " + emp.getEmpNo()+ ", Job = " + emp.getJob());
